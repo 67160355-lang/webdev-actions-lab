@@ -1,0 +1,90 @@
+:root {
+  --bg-color: #eef4fb;
+  --card-bg: #ffffff;
+  --text-color: #2c3e50;
+  --btn-color: #1769aa;
+  --btn-hover: #0f4c81;
+}
+
+body.dark-mode {
+  --bg-color: #121820;
+  --card-bg: #1e293b;
+  --text-color: #f1f5f9;
+  --btn-color: #38bdf8;
+  --btn-hover: #0284c7;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 24px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.grid-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.grid-sections .card {
+  text-align: left;
+  padding: 20px;
+}
+
+.student-info {
+  font-weight: 600;
+  color: var(--btn-color);
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+button {
+  background: var(--btn-color);
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--btn-hover);
+}
+
+.skills-list {
+  padding-left: 20px;
+  margin: 0;
+}
